@@ -10,7 +10,9 @@ class SimpleArgs:
       
         self.num_learnable_aggregation_tokens = kwargs.pop('num_learnable_aggregation_tokens', 8)
         self.freeze_te = kwargs.pop('freeze_te', 8)
-        self.resume = None
+
+        self.resume = kwargs.pop("resume", True)
+        self.foundation_model_path = kwargs.pop('foundation_model_path', None)
         
         for key, value in kwargs.items():
             setattr(self, key, value)
