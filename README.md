@@ -8,7 +8,7 @@ The difference between ImAge and the previous paradigm is shown in this figure:
 
 <img src="figures/pipeline.jpg" width="800px">
 
-To quickly test and use our model, you can use Torch Hub:
+To quickly use our model, you can use Torch Hub:
 ```
 import torch
 model = torch.hub.load("Lu-Feng/ImAge", "ImAge")
@@ -80,7 +80,7 @@ python3 eval.py --eval_datasets_folder=/path/to/your/datasets_vg/datasets --eval
   </tbody>
 </table>
 
-！！！The code for merging previous VPR datasets to get the unified dataset is still being refined and will be released alongside the code of SelaVPR++. Please wait patiently.
+！！！The code for merging previous VPR datasets to get the unified (merged) dataset is still being refined and will be released alongside the code of SelaVPR++. Please wait patiently.
 
 ## Others
 
