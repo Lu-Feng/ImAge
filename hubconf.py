@@ -16,7 +16,7 @@ class SimpleArgs:
 
 def ImAge(training_set="Merged", **kwargs):
     args = SimpleArgs(**kwargs)
-    model = network.VPRNet(args)
+    model = network.VPRmodel(args)
     model = torch.nn.DataParallel(model)
     if training_set == "Merged":
       model.load_state_dict(
