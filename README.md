@@ -8,6 +8,12 @@ The difference between ImAge and the previous paradigm is shown in this figure:
 
 <img src="figures/pipeline.jpg" width="800px">
 
+To quickly test and use our model, you can use Torch Hub:
+```
+import torch
+model = torch.hub.load("Lu-Feng/ImAge", "ImAge")
+```
+
 ## Getting Started
 
 This repo follows the framework of [GSV-Cities](https://github.com/amaralibey/gsv-cities) for training, and the [Visual Geo-localization Benchmark](https://github.com/gmberton/deep-visual-geo-localization-benchmark) for evaluation. You can download the GSV-Cities datasets [HERE](https://www.kaggle.com/datasets/amaralibey/gsv-cities), and refer to [VPR-datasets-downloader](https://github.com/gmberton/VPR-datasets-downloader) to prepare test datasets.
