@@ -36,10 +36,10 @@ def resume_train(args, model, optimizer=None, strict=False):
     model.load_state_dict(checkpoint["model_state_dict"], strict=strict)
     if optimizer:
         optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
-    best_r5 = checkpoint["best_r5"]
+    best_r1_r5 = checkpoint["best_r1_r5"]
     not_improved_num = checkpoint["not_improved_num"]
     logging.debug(f"Loaded checkpoint: start_epoch_num = {start_epoch_num}, "
-                  f"current_best_R@5 = {best_r5:.1f}")
+                  f"current best (R@1 + R@5) = {best_r1_r5:.1f}")
     if args.resume.endswith("best_model.pth"):  # Copy best model to current save_dir
         shutil.copy(args.resume.replace("best_model.pth", "best_model.pth"), args.save_dir)
-    return model, optimizer, best_r5, start_epoch_num, not_improved_num
+    return model, optimizer, best_r1_r5, start_epoch_num, not_improved_num
