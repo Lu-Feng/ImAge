@@ -1,7 +1,8 @@
 <img src="figures/ImAge.jpg" width="1000px">
 
 This is the official repository for the NeurIPS 2025 paper "Towards Implicit Aggregation: Robust Image Representation for Place Recognition in the Transformer Era".
-[Paper on ArXiv](https://arxiv.org/pdf/2511.06024) | [Paper on HF](https://huggingface.co/papers/2511.06024) | [Model on HF](https://huggingface.co/fenglu96/ImAge4VPR)
+
+[[Paper on ArXiv](https://arxiv.org/pdf/2511.06024) | [Paper on HF](https://huggingface.co/papers/2511.06024) | [Model on HF](https://huggingface.co/fenglu96/ImAge4VPR)]
 
 ImAge is an implicit aggregation method to get robust global image descriptors for visual place recognition, which neither modifies the backbone nor needs an extra aggregator. It only adds some aggregation tokens before a specific block of the transformer backbone, leveraging the inherent self-attention mechanism to implicitly aggregate patch features. Our method provides a novel perspective different from the previous paradigm, effectively and efficiently achieving SOTA performance. 
 
