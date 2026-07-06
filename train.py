@@ -122,7 +122,7 @@ elif args.optim == "sgd":
 #### Resume model, optimizer, and other training parameters
 if args.resume:
     model, optimizer, best_r1_r5, start_epoch_num, not_improved_num = util.resume_train(args, model, optimizer)
-    logging.info(f"Resuming from epoch {start_epoch_num} with best recall@5 {best_r5:.1f}")
+    logging.info(f"Resuming from epoch {start_epoch_num} with best (R@1 + R@5) {best_r1_r5:.1f}")
 else:
     best_r1_r5 = start_epoch_num = not_improved_num = 0
 
