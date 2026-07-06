@@ -108,7 +108,7 @@ if args.aggregator in ["netvlad"]:  # If using NetVLAD layer, initialize it
         logging.info(f"Train query set: {triplets_ds}")
         triplets_ds.is_inference = True
         pretrained_model = network.get_backbone(args)
-        model.module.agg.initialize_netvlad_layer(args, triplets_ds, pretrained_model.to(args.device)) 
+        model.module.aggregator.initialize_netvlad_layer(args, triplets_ds, pretrained_model.to(args.device)) 
     args.features_dim = args.features_dim * 8
 
 logging.info(f"Output dimension of the model is {args.features_dim}")
